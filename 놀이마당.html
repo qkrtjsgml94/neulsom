@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+
+  <title>놀이마당</title>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js"></script>
+    <!--[if IE]><script type="text/javascript" src="excanvas.js"></script><![endif]-->
+    <script type="text/javascript" src="html5-canvas-drawing-app.js"></script>
+</head>
+<style>
+
+body{
+font-family:  "한컴 윤고딕 230",  Helvetica, Arial, sans-serif;
+font-weight: bold;
+max-width: 1600px;}
+
+.main
+ { background-image: url('마당메인.png');
+  background-repeat: no-repeat;
+  background-size: 90% 930px;
+  height: 930px;
+  width: 90%;
+  margin: 0% 11% 0%
+  }
+
+.main2
+ { background-image: url('마당1.png');
+  background-repeat: no-repeat;
+  background-size: 90% 930px;
+  height: 930px;
+  width: 90%;
+  margin: 0% 11% 0%
+  }
+
+
+.main3
+ { background-image: url('마당2.png');
+  background-repeat: no-repeat;
+  background-size: 90% 930px;
+  height: 930px;
+  width: 90%;
+  margin: 0% 11% 0%
+  }
+
+
+
+
+
+
+
+
+
+.logo
+{float: left;
+  padding-top: 10px;
+}
+
+.menu
+{padding-left: 200px;
+padding-top: 10px;
+
+}
+
+.menu1
+{float: left;
+  padding-top: 15px;
+  padding-left: 220px;
+}
+
+.menu2
+{float: left;
+  padding-top: 15px;
+  padding-left: 7%;
+}
+
+.menu3
+{float: left;
+  padding-top: 15px;
+  padding-left: 7%;
+}
+
+.menu4
+{float: left;
+  padding-top: 15px;
+  padding-left: 7%;
+}
+
+.menu5
+{float: left;
+  padding-top: 15px;
+  padding-left: 7%;
+}
+
+.dir
+{
+  padding-top: 450px;
+}
+
+.dir1
+{
+float: left;
+padding-left: 70px;
+ padding-top: 10px;
+}
+
+.dir2
+{
+ float: right;
+ padding-right: 210px;
+ padding-top: 10px;
+}
+
+.dir3
+{ float: left;
+ padding-left: 37%;
+ padding-top: 390px;
+}  
+
+.co
+{
+ padding-left: 150px;
+}
+
+.co1
+{float: left;
+padding-left: 50px;
+padding-top: 120px;
+}
+
+.co2
+{float: left;
+padding-top: 120px;
+}
+
+.co3
+{float: left;
+  padding-left: 70px;
+padding-top: 120px;
+}
+
+.co4
+{float: left;
+padding-top: 120px;
+}
+
+#canvasDiv
+{
+  padding-top: 60px;
+  padding-left: 220px;
+}
+
+.a
+ {	padding-top: 100px;
+ 	padding-left: 580px;
+	font-size: 32px;
+}
+
+.b
+{   padding-top: 100px;
+	padding-left: 545px;
+	font-size: 32px;
+}
+
+
+
+
+
+  </style>
+  
+  <body>
+  <div class= 'main'>
+
+
+  <span class= 'logo'><a href="늘솜이네.html">
+  <img src="로고.png" width="78" height="63" /></a></span>
+
+  <div class="menu">
+  <span class="menu1"><a href="늘솜이네.html">
+  <img src="늘솜이네.png"  onmouseover='this.src="늘솜이네2.png"' onmouseout='this.src="늘솜이네.png"' width="93" height="40" /></a></span>
+
+  <span class="menu2"> <a href="늘솜이야기.html">
+  <img src="늘솜이야기.png" onmouseover='this.src="늘솜이야기2.png"' onmouseout='this.src="늘솜이야기.png"'  width="93" height="40" />  </a></span>
+
+
+  <span class="menu3"><a href="한복방.html">
+  <img src="한복방.png" onmouseover='this.src="한복방2.png"' onmouseout='this.src="한복방.png"'  width="93" height="40"></a></span>
+
+   <span class="menu4"><a href="누리네소식.html">
+   <img src="놀이마당2.png"  width="93" height="40" /></a></span></div>
+
+  <span class="menu5"><a href="누리네소식.html">
+  <img src="누리네소식.png" onmouseover='this.src="누리네소식2.png"' onmouseout='this.src="누리네소식.png"'  width="93" height="40" /></a></span>
+
+
+  <div class="dir">
+ <span class="dir1"><a href="한복방.html">
+  <img src="왼쪽.png" width="45" height="80" /></a></span>
+
+  <span class="dir2"><a href="누리네소식.html">
+  <img src="오른쪽.png" width="45" height="80" /></a></span>
+   </div>
+
+  <span class="dir3">
+  <img src="아래.png" width="50" height="50" /></span>
+
+</div>
+
+<div class="main2">
+  <div class="a">한복 색칠공부</div>
+
+  <div id="canvasDiv">
+    <script type="text/javascript" > $(document).ready(function() {
+       prepareCanvas();
+});</script>
+</div>
+</div>
+
+ <div class="main3">
+ <div class="b">핸드폰 케이스 디자인</div>
+  <div class= "co">
+  <span class="co1">
+    <img src="색1.png" onmouseover='this.src="색2.png"' onmouseout='this.src="색1.png"'  width="225" height="405" /></span>
+      <span class="co2">
+    <img src="색3.png" onmouseover='this.src="색4.png"' onmouseout='this.src="색3.png"'  width="225" height="405" /> </span>
+
+    <span class="co3">
+    <img src="색5.png" onmouseover='this.src="색6.png"' onmouseout='this.src="색5.png"'  width="225" height="405" /></span>
+    <span class="co4">
+    <img src="색7.png" onmouseover='this.src="색8.png"' onmouseout='this.src="색7.png"'  width="225" height="405" /></span>
+</div>
+   </div>
+
+  </div>
+
+
+
+
+
+
+
+  </body>
+  
+
+
+
+
+
+  </html>
